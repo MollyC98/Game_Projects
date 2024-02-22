@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] bool isPlayer;
     [SerializeField] int health = 50;
+
+    [SerializeField] int score= 50;
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] int deathValue;
 
@@ -12,9 +15,12 @@ public class Health : MonoBehaviour
 
     CameraShake cameraShake;
 
+    ScoreKeeper scoreKeeper;
+
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -34,14 +40,30 @@ public class Health : MonoBehaviour
         }
     }
 
+    public int GetHealth()
+    {
+        return health;
+
+    }
+
     void TakeDamage(int damage)
     {
         health -= damage;
         Debug.Log(health);
         if(health <= deathValue)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die()
+    {
+        if(!isPlayer)
+        {
+            scoreKeeper.ModifyScore(score);
+        }
+        Destroy(gameObject);
     }
 
     void PlayHitEffect()

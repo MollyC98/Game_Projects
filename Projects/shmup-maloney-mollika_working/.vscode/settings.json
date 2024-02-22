@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "shmup-maloney-mollika.sln"
+    "dotnet.defaultSolution": "shmup-maloney-mollika_working.sln"
 }
