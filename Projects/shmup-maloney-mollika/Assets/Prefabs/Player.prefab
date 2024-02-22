@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -3380528577568986545}
   - component: {fileID: -1883322465524983951}
   - component: {fileID: -4032672718338284231}
+  - component: {fileID: -6691707027861335397}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -80,10 +81,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  paddingLeft: 0
-  paddingRight: 0
-  paddingTop: 0
-  paddingBottom: 0
 --- !u!50 &-3380528577568986545
 Rigidbody2D:
   serializedVersion: 4
@@ -140,7 +137,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.08341265}
@@ -158,7 +155,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8207efff9d2b7448ab70140633e7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   health: 50
+  score: 0
+  hitEffect: {fileID: 7299941726003275517, guid: 436dcc7ff73e44061a9504d526ce9196, type: 3}
+  deathValue: 0
+  applyCameraShake: 1
+--- !u!114 &-6691707027861335397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055169813922416619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf59eb63b7eca4f08a666f55c2e09d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8540120735829413610, guid: 40b370dd2b12b694280e79a2cf7a93da, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 5
+  basefiringRate: 0.2
+  useAI: 0
+  firingRateVariance: 0
+  minimumFiringRate: 0.1
+  isFiring: 0
 --- !u!1 &2672667392132263747
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +262,6 @@ SpriteRenderer:
   m_Size: {x: 1.12, y: 0.75}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
