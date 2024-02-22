@@ -15,11 +15,14 @@ public class Health : MonoBehaviour
 
     CameraShake cameraShake;
 
+    AudioPlayer audioPlayer;
+
     ScoreKeeper scoreKeeper;
 
     void Awake()
     {
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        audioPlayer = FindObjectOfType<AudioPlayer>();
         scoreKeeper = FindObjectOfType<ScoreKeeper>();
     }
 
@@ -35,6 +38,7 @@ public class Health : MonoBehaviour
             TakeDamage(damageDealer.GetDamage());
             PlayHitEffect();
             ShakeCamera();
+            audioPlayer.PlayDamageClip();
             //kills projectile
             damageDealer.Hit();
         }
