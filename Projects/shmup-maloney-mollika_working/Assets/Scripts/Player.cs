@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        river =  GameObject.Find("riverfieldv1");
+        river =  GameObject.Find("riverfield_water");
         Debug.Log(river);
         InitBounds();
      
