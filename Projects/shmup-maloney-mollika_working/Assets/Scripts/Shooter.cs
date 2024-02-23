@@ -2,25 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooter : MonoBehaviour
+public class Shooter : MonoBehaviour // shooter class responsible for firing projectiles 
 {
     [Header("General")]
-    [SerializeField] GameObject projectilePrefab;
-    [SerializeField] float projectileSpeed = 10f;
-    [SerializeField] float projectileLifetime = 1f;
+    [SerializeField] GameObject projectilePrefab; // prefab for the projectile fired 
+    [SerializeField] float projectileSpeed = 10f; // speed of the projectiles 
+    [SerializeField] float projectileLifetime = 1f; // life of the projectiles 
 
-    [SerializeField] float basefiringRate = 0.2f;
+    [SerializeField] float basefiringRate = 0.2f;// Base rate (fire)
 
-    [Header("AI")]
+    [Header("AI")] // AI controlled firing enabled 
 
     [SerializeField] bool useAI;
 
     [SerializeField] float firingRateVariance = 0f;
-    [SerializeField] float minimumFiringRate = 0.1f;
+    [SerializeField] float minimumFiringRate = 0.1f;// minimum fire rate for AI 
 
-    [HideInInspector] public bool isFiring;
+    [HideInInspector] public bool isFiring;// determines if shooter is firing
 
-    Coroutine firingCoroutine;
+    Coroutine firingCoroutine; // continuous firing 
 
     AudioPlayer audioPlayer;
 
@@ -35,7 +35,7 @@ public class Shooter : MonoBehaviour
    
     void Start()
     {
-        if(useAI)
+        if(useAI) // If AI-controlled firing is enabled, set isFiring to true
         {
             isFiring = true;
         }
@@ -43,12 +43,12 @@ public class Shooter : MonoBehaviour
 
     void Update()
     {
-        Fire();
+        Fire(); // handling firing logic 
     }
 
     void Fire()
     {
-        if (isFiring && firingCoroutine == null)
+        if (isFiring && firingCoroutine == null) // If firing is enabled and the firingCoroutine is null, start firing
         {
           firingCoroutine = StartCoroutine(FireContinuously());
         }
@@ -62,13 +62,13 @@ public class Shooter : MonoBehaviour
     {
         while(true)
         {
-            GameObject instance = Instantiate(projectilePrefab, 
+            GameObject instance = Instantiate(projectilePrefab, //Instantiate a projectile at the shooter's position with no rotation
             transform.position, Quaternion.identity);
 
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
             if(rb != null)
             {
-                rb.velocity = transform.up * projectileSpeed;
+                rb.velocity = transform.up * projectileSpeed; //If the Rigidbody2D component exists, set its velocity to move upward with the specified speed
             }
 
 
@@ -76,12 +76,14 @@ public class Shooter : MonoBehaviour
             float timeToNextProjectile = Random.Range(basefiringRate - firingRateVariance,
             basefiringRate + firingRateVariance);
 
+            // Ensure the timeToNextProjectile is within the defined minimumFiringRate and float.MaxValu
+
             timeToNextProjectile = Mathf.Clamp(timeToNextProjectile, minimumFiringRate, float.MaxValue);
 
             audioPlayer.PlayShootingClip();
 
 
-            yield return new WaitForSeconds(timeToNextProjectile);
+            yield return new WaitForSeconds(timeToNextProjectile);   // Wait for the calculated time before firing the next projectile
         }
     }
 

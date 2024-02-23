@@ -14,7 +14,17 @@ public class LevelManager : MonoBehaviour
     }
     public void LoadGame()
     {
-        scoreKeeper.ResetScore();
+        //scoreKeeper.ResetScore();
+
+        if (scoreKeeper != null)
+        {
+            scoreKeeper.ResetScore();
+        }
+        else
+        {
+            Debug.LogError("scoreKeeper is null in LoadGame()");
+        }
+        
         SceneManager.LoadScene("Game");
 
 
