@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: paintings
+    uniqueID: 1176965983
+    locked: 0
   - name: Pillars
     uniqueID: 2967455757
     locked: 0
