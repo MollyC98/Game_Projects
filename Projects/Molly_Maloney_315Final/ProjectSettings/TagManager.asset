@@ -41,7 +41,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: paintings
+  - name: Background
+    uniqueID: 4038556979
+    locked: 0
+  - name: Wall Decorations
     uniqueID: 1176965983
     locked: 0
   - name: Pillars
@@ -52,4 +55,10 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 1683146397
+    locked: 0
+  - name: Object To Get
+    uniqueID: 2206773715
+    locked: 0
+  - name: Obstacles
+    uniqueID: 3333084719
     locked: 0
