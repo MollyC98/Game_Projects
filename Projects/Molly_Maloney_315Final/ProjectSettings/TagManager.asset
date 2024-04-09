@@ -50,9 +50,6 @@ TagManager:
   - name: Pillars
     uniqueID: 2967455757
     locked: 0
-  - name: Platform
-    uniqueID: 1289210359
-    locked: 0
   - name: player
     uniqueID: 1683146397
     locked: 0
@@ -61,4 +58,10 @@ TagManager:
     locked: 0
   - name: Obstacles
     uniqueID: 3333084719
+    locked: 0
+  - name: Platform
+    uniqueID: 1289210359
+    locked: 0
+  - name: Player
+    uniqueID: 1011820461
     locked: 0
