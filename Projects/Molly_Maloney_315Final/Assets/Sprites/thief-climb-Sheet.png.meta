@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0cca066fff8f34f3f97644278af61a0e
+guid: fef952abbe103a5478eb39f90f764fab
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,64 +123,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: security_0
+      name: thief-climb-Sheet_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 3
-        width: 102
-        height: 186
+        x: 48
+        y: 0
+        width: 120
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 193bca2698bf34647a1164a0e2bd8a06
-      internalID: 799537193
+      spriteID: a55d50c747617904dab54b110b06b21f
+      internalID: 98123031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: security_1
+      name: thief-climb-Sheet_1
       rect:
         serializedVersion: 2
-        x: 240
-        y: 3
-        width: 96
-        height: 189
+        x: 246
+        y: 0
+        width: 120
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cbd1bd4a0e0f497abf2e14c5eb05677
-      internalID: -488281784
+      spriteID: 1ec2c902e3a9edd40b52a43a8dafe114
+      internalID: 1559084931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: security_2
+      name: thief-climb-Sheet_2
       rect:
         serializedVersion: 2
-        x: 432
-        y: 3
-        width: 96
-        height: 186
+        x: 435
+        y: 0
+        width: 120
+        height: 192
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b735e8fbe5e4842a1b95e8e2131595d7
-      internalID: 1791916445
+      spriteID: c2bd6d4dcf1a17b42ae6c182db9bfa63
+      internalID: -356476601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief-climb-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 0
+        width: 120
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ce0f2061484c5489ae40de817c4cf1
+      internalID: 113416469
       vertices: []
       indices: 
       edges: []
@@ -196,9 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      security_0: 799537193
-      security_1: -488281784
-      security_2: 1791916445
+      thief-climb-Sheet_0: 98123031
+      thief-climb-Sheet_1: 1559084931
+      thief-climb-Sheet_2: -356476601
+      thief-climb-Sheet_3: 113416469
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

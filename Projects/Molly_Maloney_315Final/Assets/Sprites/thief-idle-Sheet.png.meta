@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0cca066fff8f34f3f97644278af61a0e
+guid: a981e8a7a972a1843814f1c1408f478b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,64 +123,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: security_0
+      name: thief-idle-Sheet_0
       rect:
         serializedVersion: 2
-        x: 42
+        x: 30
         y: 3
-        width: 102
+        width: 108
         height: 186
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 193bca2698bf34647a1164a0e2bd8a06
-      internalID: 799537193
+      spriteID: 868e1dcd8509a914d90feec54f06023e
+      internalID: -69402467
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: security_1
+      name: thief-idle-Sheet_1
       rect:
         serializedVersion: 2
-        x: 240
+        x: 222
         y: 3
-        width: 96
-        height: 189
+        width: 108
+        height: 186
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cbd1bd4a0e0f497abf2e14c5eb05677
-      internalID: -488281784
+      spriteID: 65c2db3e60bd4a54582f36ecd32c14d1
+      internalID: -1848356252
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: security_2
+      name: thief-idle-Sheet_2
       rect:
         serializedVersion: 2
-        x: 432
+        x: 414
         y: 3
-        width: 96
+        width: 108
         height: 186
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b735e8fbe5e4842a1b95e8e2131595d7
-      internalID: 1791916445
+      spriteID: d6549daea71090a4e9e8ef6995874d50
+      internalID: 1776886508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief-idle-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 3
+        width: 108
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22fd7a4b2613ca428e64556795d5452
+      internalID: -1975822807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: thief-idle-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 3
+        width: 108
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3334d6038bb34bd438e268cb962b76a1
+      internalID: -678114551
       vertices: []
       indices: 
       edges: []
@@ -196,9 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      security_0: 799537193
-      security_1: -488281784
-      security_2: 1791916445
+      thief-idle-Sheet_0: -69402467
+      thief-idle-Sheet_1: -1848356252
+      thief-idle-Sheet_2: 1776886508
+      thief-idle-Sheet_3: -1975822807
+      thief-idle-Sheet_4: -678114551
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
