@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 moveInput;
     Rigidbody2D myRigidBody;
     Animator myAnimator;
+    SpriteRenderer spriteRenderer;
     CapsuleCollider2D myCapsuleCollider;
 
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -65,11 +67,15 @@ public class PlayerMovement : MonoBehaviour
 
     void FlipSprite()
     {
+        Debug.Log(moveInput.x);
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidBody.velocity.x) > Mathf.Epsilon;
+        // spriteRenderer.flipX = playerHasHorizontalSpeed;
 
-        if (playerHasHorizontalSpeed)
-        {
-        transform.localScale = new Vector2 (Mathf.Sign(myRigidBody.velocity.x), 1f);
-        }
+         if (playerHasHorizontalSpeed)
+         {
+            //  transform.localScale = new Vector2 (Mathf.Sign(myRigidBody.velocity.x), 0.5f);
+            transform.localScale = new Vector2 (Mathf.Sign(moveInput.x)*0.5f, 0.5f);
+
+         }
     }
 }

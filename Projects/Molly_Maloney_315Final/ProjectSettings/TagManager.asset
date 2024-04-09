@@ -50,9 +50,6 @@ TagManager:
   - name: Pillars
     uniqueID: 2967455757
     locked: 0
-  - name: player
-    uniqueID: 1683146397
-    locked: 0
   - name: Object To Get
     uniqueID: 2206773715
     locked: 0
@@ -64,4 +61,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1011820461
+    locked: 0
+  - name: player
+    uniqueID: 1683146397
     locked: 0
